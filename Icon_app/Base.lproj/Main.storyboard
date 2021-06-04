@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oMC-CU-aJD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Theme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ThemeViewController" customModule="Icon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpj-hs-E9I">
+                                <rect key="frame" x="16" y="62" width="154" height="47"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKm-rs-FIa">
+                                <rect key="frame" x="191" y="802" width="38" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Teste"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hpj-hs-E9I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="i2u-Fg-0Yf"/>
+                            <constraint firstItem="hpj-hs-E9I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uYl-fX-9N4"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4RZ-b2-cgZ"/>
+                    <connections>
+                        <outlet property="labelTitulo" destination="hpj-hs-E9I" id="Fu8-fV-1Ma"/>
+                        <segue destination="hwm-xV-P42" kind="show" identifier="mySegue" id="LFY-kb-gej"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2779.7101449275365" y="85.714285714285708"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="boo-De-ksf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="hwm-xV-P42" customClass="SecondViewController" customModule="Icon_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mqi-6v-cZp" customClass="Secon">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-6d-jNK">
+                                <rect key="frame" x="157" y="764" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="258-ER-eIG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="xQK-cB-7K3"/>
+                                </constraints>
+                                <state key="normal" title="Já entendi"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" verticalHuggingPriority="500" verticalCompressionResistancePriority="500" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" minimumZoomScale="4" keyboardDismissMode="interactive" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VE-bt-XBY">
+                                <rect key="frame" x="25" y="87" width="369" height="647"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="647" id="FYh-bi-5yE"/>
+                                    <constraint firstAttribute="width" constant="374" id="Gw6-ni-qOp"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bnh-0T-w02"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zcz-ej-YAw"/>
+                                <string key="text">Quem atua na área de design, arquitetura e engenharia, com certeza já se deparou com a fascinante teoria sobre as aplicações da proporção áurea. Há quem defenda que seu uso em projetos os torna mais bem-acabados, e outros que não acreditam tanto assim na sua eficácia.
+
+Polêmicas à parte, o fato é que esse assunto dá muito o que falar! Afinal, já está nos anais da história da humanidade há muito tempo, e quem trabalha com design deveria, sim, reservar um tempinho para estudar, conhecer, aprender, analisar e tirar suas próprias conclusões sobre o tema. Então, que tal acompanhar o post?
+
+Afinal, o que é proporção áurea?
+O segmento áureo, razão áurea ou, simplesmente, proporção áurea é originado da matemática, sendo uma constante real algébrica irracional — e para os poucos simpatizantes da matemática, não é motivo para calafrios! 
+
+Na verdade, o assunto transcende essa temida ciência e vai muito além, provocando fascínio na maioria das pessoas que se aventura a mergulhar no tema.
+
+Suas aplicações remontam há séculos. A relação entre a razão áurea e as artes pode ter nascido de um livro escrito por um monge italiano, Luca Pacioli, intitulado: “De Divina Proportione”, no século XVI, e confiou ao seu amigo Leonardo da Vinci as ilustrações do manuscrito.
+
+sário us</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gu1-S9-a9R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gu1-S9-a9R" firstAttribute="trailing" secondItem="1b9-6d-jNK" secondAttribute="trailing" constant="157" id="Aic-7i-Q2I"/>
+                            <constraint firstItem="1b9-6d-jNK" firstAttribute="top" secondItem="7VE-bt-XBY" secondAttribute="bottom" constant="8" id="FcD-bN-nsW"/>
+                            <constraint firstItem="gu1-S9-a9R" firstAttribute="bottom" secondItem="1b9-6d-jNK" secondAttribute="bottom" constant="48" id="QYW-9k-Vc9"/>
+                            <constraint firstItem="7VE-bt-XBY" firstAttribute="leading" secondItem="gu1-S9-a9R" secondAttribute="leading" constant="25" id="ZDT-Wd-Vee"/>
+                            <constraint firstItem="gu1-S9-a9R" firstAttribute="trailing" secondItem="7VE-bt-XBY" secondAttribute="trailing" constant="25" id="a7m-jp-AU6"/>
+                            <constraint firstItem="1b9-6d-jNK" firstAttribute="top" secondItem="7VE-bt-XBY" secondAttribute="bottom" constant="30" id="aNb-xE-6oY"/>
+                            <constraint firstItem="gu1-S9-a9R" firstAttribute="trailing" secondItem="7VE-bt-XBY" secondAttribute="trailing" constant="20" id="fVF-y8-LEa"/>
+                            <constraint firstItem="1b9-6d-jNK" firstAttribute="leading" secondItem="gu1-S9-a9R" secondAttribute="leading" constant="157" id="kjS-w4-xBc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8m1-jv-P2p"/>
+                    <connections>
+                        <outlet property="mybutton" destination="1b9-6d-jNK" id="Dm0-Kb-2ZS"/>
+                        <outlet property="mytextField" destination="7VE-bt-XBY" id="oRN-FY-eDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ji-4i-qaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3594.202898550725" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CPB-U1-W7b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oMC-CU-aJD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KDr-M8-8WM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mg9-gf-WHp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wa2-b4-nL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5652173913045" y="85.714285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
