@@ -19,9 +19,9 @@ class TileCollectionViewCell: UICollectionViewCell {
     
     private let label: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = .darkGray
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 20, weight: .medium)
+        label.font = .systemFont(ofSize: 22, weight: .regular)
         return label
     }()
     

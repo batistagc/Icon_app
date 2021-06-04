@@ -14,25 +14,9 @@
             filePath = "Icon_app/ThemeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DC7F6D17-5196-46E8-85A7-5724175A2A18"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Icon_app/ThemeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "CollectionTableViewCellDidTapItem(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

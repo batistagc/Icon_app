@@ -22,6 +22,7 @@ class ThemeViewController: UIViewController, UITableViewDataSource, UITableViewD
                 TileCollectionViewCellViewModel(name: "Unidade", backgroundColor: .systemBackground, imageName: "weight1"),
                 TileCollectionViewCellViewModel(name: "Brevidade", backgroundColor: .systemBackground, imageName: "weight2"),
                 TileCollectionViewCellViewModel(name: "Alinhamento", backgroundColor: .systemBackground, imageName: "weight3"),
+                TileCollectionViewCellViewModel(name: "", backgroundColor: .systemBackground, imageName: ""),
         ])
     ]
 
@@ -43,7 +44,7 @@ class ThemeViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.frame = CGRect(x: 0, y: 200, width: 450, height: 500)
+        tableView.frame = CGRect(x: 0, y: 200, width: 400, height: 500)
     }
 
 
@@ -67,6 +68,7 @@ class ThemeViewController: UIViewController, UITableViewDataSource, UITableViewD
         return view.frame.size.width + 200
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(viewModels[indexPath.row])
     }
@@ -77,19 +79,11 @@ class ThemeViewController: UIViewController, UITableViewDataSource, UITableViewD
 extension ThemeViewController: CollectionTableViewCellDelegate{
     func CollectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel) {
         if viewModel.name == "Unidade"{
-//           let secondViewController = SecondViewController()
-//           secondViewController.modalPresentationStyle = .fullScreen
-//           self.present(secondViewController, animated: true, completion: nil)
             performSegue(withIdentifier: "mySegue", sender: nil)
-            
         }; if viewModel.name == "Brevidade" {
-            let alert = UIAlertController(title: viewModel.name, message: "Clicô na Brevidade mano", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-            present(alert, animated: true)
+            performSegue(withIdentifier: "mySegue2", sender: nil)
         }; if viewModel.name == "Alinhamento" {
-            let alert = UIAlertController(title: viewModel.name, message: "Clicô no alinhamento mano", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-            present(alert, animated: true)
+            performSegue(withIdentifier: "mySegue3", sender: nil)
         }
     }
 }
